@@ -26,7 +26,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         env:
-          BUNDLE_GITHUB__COM: x-access-token:${{ secrets.TOKEN }}
+          BUNDLE_GITHUB__COM: ${{ secrets.TOKEN }}:x-oauth-basic
         with:
           ruby-version: ${{ matrix.ruby-version }}
           bundler-cache: true
