@@ -1,0 +1,53 @@
+schema: GetAccountSummarySchema
+
+definitions:
+  - class: Account
+    properties:
+      - name: balance
+        path:
+          - balance
+        type: float
+
+      - name: available
+        path:
+          - available
+        type: float
+
+      - name: order
+        path:
+          - order
+        type: float
+
+      - name: stake
+        path:
+          - stake
+        type: float
+
+      - name: currency
+        path:
+          - currency
+        type: string
+
+class: Response
+properties:
+  - name: id
+    path:
+      - id
+    type: integer
+
+  - name: method
+    path:
+      - method
+    type: string
+
+  - name: code
+    path:
+      - code
+    type: integer
+
+  - name: accounts
+    path:
+      - result
+      - accounts
+    type: Account
+    array: true

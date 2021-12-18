@@ -1,0 +1,58 @@
+schema: GetInstrumentsSchema
+
+definitions:
+  - class: Instrument
+    properties:
+      - name: name
+        path:
+          - instrument_name
+        type: string
+
+      - name: quote_currency
+        path:
+          - quote_currency
+        type: string
+
+      - name: base_currency
+        path:
+          - base_currency
+        type: string
+
+      - name: price_decimals
+        path:
+          - price_decimals
+        type: integer
+
+      - name: quantity_decimals
+        path:
+          - quantity_decimals
+        type: integer
+
+      - name: margin_trading_enabled
+        path:
+          - margin_trading_enabled
+        type: boolean
+
+class: Response
+properties:
+  - name: id
+    path:
+      - id
+    type: integer
+
+  - name: method
+    path:
+      - method
+    type: string
+
+  - name: code
+    path:
+      - code
+    type: integer
+
+  - name: instruments
+    path:
+      - result
+      - instruments
+    type: Instrument
+    array: true

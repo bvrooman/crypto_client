@@ -1,0 +1,18 @@
+schema: AsynchronousResponseSchema
+
+class: Response
+properties:
+  - name: id
+    path:
+      - id
+    type: integer
+
+  - name: method
+    path:
+      - method
+    type: string
+
+  - name: code
+    path:
+      - code
+    type: integer

@@ -1,0 +1,53 @@
+schema: GetCandlestickSchema
+
+definitions:
+  - class: Candlestick
+    properties:
+      - name: time
+        path:
+          - t
+        type: integer
+
+      - name: open
+        path:
+          - o
+        type: float
+
+      - name: high
+        path:
+          - h
+        type: float
+
+      - name: low
+        path:
+          - l
+        type: float
+
+      - name: close
+        path:
+          - c
+        type: float
+
+      - name: volume
+        path:
+          - v
+        type: float
+
+class: Response
+properties:
+  - name: code
+    path:
+      - code
+    type: integer
+
+  - name: method
+    path:
+      - method
+    type: string
+
+  - name: candlesticks
+    path:
+      - result
+      - data
+    type: Candlestick
+    array: true

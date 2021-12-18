@@ -1,0 +1,31 @@
+schema: CreateOrderSchema
+
+definitions:
+  - class: OrderReceipt
+    properties:
+      - name: order_id
+        path:
+          - order_id
+        type: string
+
+      - name: client_order_id
+        path:
+          - client_oid
+        type: string
+
+class: Response
+properties:
+  - name: id
+    path:
+      - id
+    type: integer
+
+  - name: method
+    path:
+      - method
+    type: string
+
+  - name: order
+    path:
+      - result
+    type: OrderReceipt

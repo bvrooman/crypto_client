@@ -1,0 +1,151 @@
+schema: GetOrderDetailSchema
+
+definitions:
+  - class: Trade
+    properties:
+      - name: side
+        path:
+          - side
+        type: string
+
+      - name: instrument_name
+        path:
+          - instrument_name
+        type: string
+
+      - name: fee
+        path:
+          - fee
+        type: float
+
+      - name: trade_id
+        path:
+          - trade_id
+        type: string
+
+      - name: create_time
+        path:
+          - create_time
+        type: integer
+
+      - name: traded_price
+        path:
+          - traded_price
+        type: float
+
+      - name: traded_quantity
+        path:
+          - traded_quantity
+        type: float
+
+      - name: fee_currency
+        path:
+          - fee_currency
+        type: string
+
+      - name: order_id
+        path:
+          - order_id
+        type: string
+
+  - class: Order
+    properties:
+      - name: status
+        path:
+          - status
+        type: string
+
+      - name: side
+        path:
+          - side
+        type: string
+
+      - name: order_id
+        path:
+          - order_id
+        type: string
+
+      - name: client_order_id
+        path:
+          - client_oid
+        type: string
+
+      - name: create_time
+        path:
+          - create_time
+        type: integer
+
+      - name: update_time
+        path:
+          - update_time
+        type: integer
+
+      - name: type
+        path:
+          - type
+        type: string
+
+      - name: instrument_name
+        path:
+          - instrument_name
+        type: string
+
+      - name: cumulative_quantity
+        path:
+          - cumulative_quantity
+        type: float
+
+      - name: cumulative_value
+        path:
+          - cumulative_value
+        type: float
+
+      - name: average_price
+        path:
+          - avg_price
+        type: float
+
+      - name: fee_currency
+        path:
+          - fee_currency
+        type: string
+
+      - name: time_in_force
+        path:
+          - time_in_force
+        type: string
+
+      - name: exec_inst
+        path:
+          - exec_inst
+        type: string
+
+class: Response
+properties:
+  - name: id
+    path:
+      - id
+    type: integer
+
+  - name: method
+    path:
+      - method
+    type: string
+
+  - name: code
+    path:
+      - code
+    type: integer
+
+  - name: trades
+    path:
+      - result
+      - trade_list
+    type: Trade
+    array: true
+
+  - name: order
+    path:
+      - result
+      - order_info
+    type: Order
