@@ -4,6 +4,8 @@ require "michigan/operation"
 
 require "crypto_client/middleware/parse_json"
 
+require_relative "id_generator"
+
 module CryptoClient
   module Util
     class BaseOperation < Michigan::Operation

@@ -4,6 +4,7 @@ require "faraday"
 
 require_relative "errors"
 require_relative "operations"
+require_relative "operations/config"
 
 module CryptoClient
   class Client

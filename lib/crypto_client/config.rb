@@ -2,6 +2,8 @@
 
 require "logger"
 
+require "crypto_client"
+
 require "modelix/schema_loader"
 
 module CryptoClient
@@ -10,7 +12,7 @@ module CryptoClient
       api_key: "",
       api_secret: "",
       logger: Logger.new($stdout),
-      modelix_path: "./lib/schemas"
+      modelix_path: CryptoClient::SCHEMAS_DIR
     }
     @allowed_config_keys = @default_config.keys
 
