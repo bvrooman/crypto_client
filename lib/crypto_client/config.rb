@@ -27,7 +27,7 @@ module CryptoClient
     def initialize
       @config = OpenStruct.new(Config.default_config)
 
-      Modelix.config.register_type('time_from_ms', Types::TimeFromMilliseconds)
+      Modelix.config.register_type("time_from_ms", Types::TimeFromMilliseconds)
 
       loader = Modelix::SchemaLoader.new
       loader.load_schema_path(config.modelix_path)

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module CryptoClient
   module Types
     class TimeFromMilliseconds
