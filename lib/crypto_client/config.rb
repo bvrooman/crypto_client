@@ -3,7 +3,9 @@
 require "logger"
 
 require "crypto_client"
+require "crypto_client/types"
 
+require "modelix/config"
 require "modelix/schema_loader"
 
 module CryptoClient
@@ -24,6 +26,8 @@ module CryptoClient
 
     def initialize
       @config = OpenStruct.new(Config.default_config)
+
+      Modelix.config.register_type('time_from_ms', Types::TimeFromMilliseconds)
 
       loader = Modelix::SchemaLoader.new
       loader.load_schema_path(config.modelix_path)

@@ -26,7 +26,7 @@ definitions:
       - name: create_time
         path:
           - create_time
-        type: integer
+        type: time_from_ms
 
       - name: traded_price
         path:
@@ -73,12 +73,12 @@ definitions:
       - name: create_time
         path:
           - create_time
-        type: integer
+        type: time_from_ms
 
       - name: update_time
         path:
           - update_time
-        type: integer
+        type: time_from_ms
 
       - name: type
         path:

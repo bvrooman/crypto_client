@@ -384,7 +384,7 @@ RSpec.describe CryptoClient::Client, type: :client do
       candlesticks = client.get_candlestick("BTC_USDT", "5m")
       expect(candlesticks).to be_an Array
       candlesticks.each do |candlestick|
-        expect(candlestick.time).to be_an Integer
+        expect(candlestick.time).to be_a Time
         expect(candlestick.open).to be_a Float
         expect(candlestick.high).to be_a Float
         expect(candlestick.low).to be_a Float
@@ -511,9 +511,8 @@ RSpec.describe CryptoClient::Client, type: :client do
       expect(order.side).to be_a String
       expect(order.order_id).to be_a String
       expect(order.client_order_id).to be_a String
-      expect(order.create_time).to be_an Integer
-      expect(order.update_time).to be_an Integer
-      expect(order.update_time).to be_an Integer
+      expect(order.create_time).to be_a Time
+      expect(order.update_time).to be_a Time
       expect(order.type).to be_a String
       expect(order.instrument_name).to be_a String
       expect(order.cumulative_quantity).to be_a Float

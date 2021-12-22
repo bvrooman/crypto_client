@@ -6,7 +6,7 @@ definitions:
       - name: time
         path:
           - t
-        type: integer
+        type: time_from_ms
 
       - name: open
         path:
