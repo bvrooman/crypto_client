@@ -1,9 +1,11 @@
 # frozen_string_literal: true
 
+require 'webmock'
+
 require_relative "responses"
 
-module Support
-  module CryptoClient
+module CryptoClient
+  module Test
     CRYPTO_BASE_URI = "https://api.crypto.com/v2/"
 
     def stub_crypto_request(method, uri, *responses)

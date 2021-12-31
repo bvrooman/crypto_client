@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module Support
-  module CryptoClient
+module CryptoClient
+  module Test
     def bad_request_error_body
       "".to_json
     end
