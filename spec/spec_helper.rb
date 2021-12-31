@@ -3,8 +3,7 @@
 require "webmock/rspec"
 
 require "crypto_client"
-
-require_relative "support/crypto_client"
+require "crypto_client/test"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -17,7 +16,7 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 
-  config.include Support::CryptoClient
+  config.include CryptoClient::Test
 end
 
 RSpec::Matchers.define :be_boolean do
