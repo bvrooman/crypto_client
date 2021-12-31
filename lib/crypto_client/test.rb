@@ -1,1 +1,3 @@
-require_relative 'test/stubs'
+# frozen_string_literal: true
+
+require_relative "test/stubs"
